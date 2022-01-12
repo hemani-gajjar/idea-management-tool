@@ -1,0 +1,20 @@
+<%- include('partials/newBucketHeader.ejs') %>
+
+<div class="new-list-form-container">
+  <h1>Create a New Bucket</h1>
+  <form action="/new-bucket" method="POST" class="new-list-form">
+    <div>
+      <label>Bucket Name</label>
+      <input
+        type="text"
+        name="bucketName"
+        required
+        oninvalid="this.setCustomValidity('Add a Bucket Name')"
+        oninput="this.setCustomValidity('')"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary new-list-btn">Create</button>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

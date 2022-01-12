@@ -1,0 +1,16 @@
+<%- include('partials/homeHeader.ejs') %>
+
+<div class="main-container">
+<% bucketArray.forEach(function(bucket){ %>
+    <a href="/buckets/<%= bucket._id %>">
+        <div class="list-name">
+            <h1> <%= bucket.name %> </h1>
+            <form action="<%= bucket._id %>/delete" method="POST">
+                <button type="submit" name="deleteButton" value="<%= bucket._id %>" class="delButton"><i class="far fa-trash-alt"></i></button>
+            </form>
+        </div>
+    </a>
+<% }) %>
+</div>
+
+<%- include('partials/footer.ejs') %>

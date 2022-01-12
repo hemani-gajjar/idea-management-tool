@@ -1,0 +1,36 @@
+<%- include('partials/bucketHeader.ejs') %>
+
+<% if(foundBucket.highlights.length === 0){ %>
+
+    <div class="no-lists-div">
+        <p class="no-lists-line">No highlights in the bucket <strong><%= foundBucket.name %></strong> yet!</p>
+    </div>
+
+<% } else { %>
+
+<% } %>
+
+<div class="list-title-container">
+    <h1 class="list-title"><%= foundBucket.name %></h1>
+  </div>
+  <div class="entry-container">
+    <% foundBucket.highlights.forEach(function(highlight){ %>
+        <a href="/">
+          <div class="entry-card">
+            <div>
+              <h1><%= highlight.title %></h1>
+              <div class="content-container">
+                <p><%= highlight.content.substring(0,100) %></p>
+                <p><%= highlight.memberName %></p>
+              </div>
+            </div>
+            <form action="/buckets/<%= bucketId %>/delete" method="POST">
+              <button type="submit" name="listDeleteButton" value="<%= highlight._id %>" class="listDelButton"><i class="far fa-trash-alt"></i></button>
+            </form>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+  </div>
+
+<%- include('partials/footer.ejs') %>

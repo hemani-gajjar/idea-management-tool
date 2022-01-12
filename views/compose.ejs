@@ -1,0 +1,40 @@
+<%- include('partials/composeHeader.ejs') %>
+
+<div class="compose-container">
+  <h1>Create new Highlight</h1>
+  <div class="compose-form-container">
+    <form
+      action="/buckets/<%= bucketId %>/new-highlight"
+      method="POST"
+      class="compose-form"
+    >
+      <div>
+        <h4>Title</h4>
+        <input
+          type="text"
+          name="highlightTitle"
+          class="form-control"
+          required
+          oninvalid="this.setCustomValidity('Add a Title')"
+          oninput="this.setCustomValidity('')"
+        />
+      </div>
+      <div>
+        <h4>Content</h4>
+        <textarea
+          name="highlightContent"
+          rows="5"
+          cols="40"
+          class="form-control"
+        ></textarea>
+      </div>
+      <div>
+        <h4>Member Name</h4>
+        <input type="text" name="highlightTitle" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary compose-btn">Create</button>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>
