@@ -1,9 +1,9 @@
 <p align="center">
   <h1>Idea Management Tool</h1>
-
+  <p>
     <br />
     <a href="https://polar-meadow-79262.herokuapp.com/"><strong>View Live »</strong></a>
-
+  </p>
 </p>
 
 Project Repository Link: https://github.com/hemani-gajjar/bujo
