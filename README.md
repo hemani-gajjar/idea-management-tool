@@ -6,7 +6,7 @@
   </p>
 </p>
 
-Project Repository Link: https://github.com/hemani-gajjar/bujo
+Project Repository Link: https://github.com/hemani-gajjar/idea-management-tool
 
 ### Built With
 
